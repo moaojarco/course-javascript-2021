@@ -3,9 +3,10 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  font-family: sans-serif;
 }
 
-.bloco {
+.vamp {
   background-color: rebeccapurple;
   border-radius: 8px;
   padding: 20px;
