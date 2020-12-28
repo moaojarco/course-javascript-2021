@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.bloco {
+  background-color: rebeccapurple;
+  border-radius: 8px;
+  padding: 20px;
+  color: #fff;
+  font-size: 18px;
+}
