@@ -47,33 +47,88 @@
 
 
 
-
 //CODE CHALLENGE #03
 
-// const pointsDolphins = (96 + 108 + 89) / 3;
-// const pointsKoalas = (88 + 91 + 110) /3;
+// const pontosGolfinhos = (96 + 108 + 89) / 3;
+// const pontosCoalas = (88 + 91 + 110) /3;
 
-// console.log(pointsDolphins, pointsKoalas)
+// console.log(pontosGolfinhos, pontosCoalas)
 
-// if(pointsDolphins > pointsKoalas){
+// if(pontosGolfinhos > pontosCoalas){
 //     console.log("Os Golfinhos venceram! 🏆");
-// } else if(pointsKoalas > pointsDolphins){
+// } else if(pontosCoalas > pontosGolfinhos){
 //     console.log("Os Koalas venceram! 🏆");
-// } else if (pointsDolphins === pointsKoalas){
+// } else if (pontosGolfinhos === pontosCoalas){
 //     console.log("Empate!");
 // }
 
-//BONUS 01
-const pointsDolphins = (97 + 112 + 80) / 3;
-const pointsKoalas = (109 + 95 + 50) /3;
-console.log(pointsDolphins, pointsKoalas);
 
-if(pointsDolphins > pointsKoalas && pointsDolphins >= 100){
-    console.log("Os Golfinhos venceram! 🏆");
-} else if(pointsKoalas > pointsDolphins && pointsKoalas >= 100){
-    console.log("Os Koalas venceram! 🏆");
-} else if (pointsDolphins === pointsKoalas && pointsDolphins >= 100 && pointsKoalas >= 100){
-    console.log("Os dois times ganharam o troféu 🏆!");
-} else{
-    console.log("Ninguém ganhou o troféu. Otários demais 😂")
+
+
+//BONUS
+// const pontosGolfinhos = (97 + 112 + 80) / 3;
+// const pontosCoalas = (109 + 95 + 50) /3;
+// console.log(pontosGolfinhos, pontosCoalas);
+
+// if(pontosGolfinhos > pontosCoalas && pontosGolfinhos >= 100){
+//     console.log("Os Golfinhos venceram! 🏆");
+// } else if(pontosCoalas > pontosGolfinhos && pontosCoalas >= 100){
+//     console.log("Os Coalas venceram! 🏆");
+// } else if (pontosGolfinhos === pontosCoalas && pontosGolfinhos >= 100 && pontosCoalas >= 100){
+//     console.log("Os dois times ganharam o troféu 🏆!");
+// } else{
+//     console.log("Ninguém ganhou o troféu. Otários demais 😂");
+// }
+
+
+
+
+
+
+const day = prompt("Coloque o dia de hoje");
+
+// switch(day){
+//     case 'segunda':
+//             console.log("segunda, é o Brad 😎");
+//     break; 
+//     case 'terça':
+//             console.log("Terça, dia de café ☕");
+//     break;
+//     case 'quarta':
+//             console.log("Quarta, é quarta-feira po 😳");
+//     break;
+//     case 'quinta':
+//     case 'sexta':
+//             console.log("os dias de salada 🥗");
+//     break;
+//     case 'sabado':
+//     case 'domingo':
+//             console.log("Dale dele doly days 🍻");
+//     default:
+//             console.log("Esse não é um dia válido")
+// }
+
+
+//DESAFIO AULA 26 (Fazer tudo acima mas com if/else e operador lógico)
+if(day === "segunda"){
+    console.log("Segunda, é o brad 😎");
+}else if(day ==="terça"){
+    console.log("Terça, dia de café ☕");
+}else if(day === "quarta"){
+    console.log("Quarta, é quarta-feira po 😳");
+}else if(day === "quinta" || day === "sexta"){
+    console.log("os dias de salada 🥗");
+}else if(day === "sabado" || day === "domingo"){
+    console.log("Dale dele doly days 🍻");
+}else{
+    console.log("Esse não é um dia válido");
 }
+ 
+
+
+
+
+
+
+
+
