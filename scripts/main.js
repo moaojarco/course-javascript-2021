@@ -85,7 +85,7 @@
 
 
 
-const day = prompt("Coloque o dia de hoje");
+// const day = prompt("Coloque o dia de hoje");
 
 // switch(day){
 //     case 'segunda':
@@ -110,22 +110,28 @@ const day = prompt("Coloque o dia de hoje");
 
 
 //DESAFIO AULA 26 (Fazer tudo acima mas com if/else e operador lógico)
-if(day === "segunda"){
-    console.log("Segunda, é o brad 😎");
-}else if(day ==="terça"){
-    console.log("Terça, dia de café ☕");
-}else if(day === "quarta"){
-    console.log("Quarta, é quarta-feira po 😳");
-}else if(day === "quinta" || day === "sexta"){
-    console.log("os dias de salada 🥗");
-}else if(day === "sabado" || day === "domingo"){
-    console.log("Dale dele doly days 🍻");
-}else{
-    console.log("Esse não é um dia válido");
-}
- 
+// if(day === "segunda"){
+//     console.log("Segunda, é o brad 😎");
+// }else if(day ==="terça"){
+//     console.log("Terça, dia de café ☕");
+// }else if(day === "quarta"){
+//     console.log("Quarta, é quarta-feira po 😳");
+// }else if(day === "quinta" || day === "sexta"){
+//     console.log("os dias de salada 🥗");
+// }else if(day === "sabado" || day === "domingo"){
+//     console.log("Dale dele doly days 🍻");
+// }else{
+//     console.log("Esse não é um dia válido");
+// }
 
 
+
+
+//CODE CHALLENGE 04
+const bill = 325;
+const gorjeta = bill <= 300 && bill >= 50 ? bill * .15 : bill * 0.2;
+
+console.log(`O Bill tem  ${bill}, a gorjeta será de  ${gorjeta} e o valor total é ${bill + gorjeta}`);
 
 
 
