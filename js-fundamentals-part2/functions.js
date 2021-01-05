@@ -45,19 +45,49 @@
 // console.log(yearsParaAposentar(1991));
 
 //Arrow Function com vários parametros + várias linhas de código
-const yearsParaAposentar = (birthDay, firstName) => {
-    const age = 2037 - birthDay;
-    const aposentadoria = 65 - age;
-    // return aposentadoria;
-    return `${firstName} irá se aposentar daqui a ${aposentadoria} anos.`
+// const yearsParaAposentar = (birthDay, firstName) => {
+//     const age = 2037 - birthDay;
+//     const aposentadoria = 65 - age;
+//     // return aposentadoria;
+//     return `${firstName} irá se aposentar daqui a ${aposentadoria} anos.`
+// }
+// console.log(yearsParaAposentar(1991, "João Marco"));
+
+
+//Chamando uma função dentro de função
+
+// function cutPieces(fruit){
+//     return fruit * 4;
+// }
+
+// function fruitProcessor(apples, oranges){
+//     const applePieces = cutPieces(apples);
+//     const orangePieces = cutPieces(oranges);
+    
+    
+//     const juice =  `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges.`;
+//     return juice;
+// }
+
+// console.log(fruitProcessor(2,3));
+
+
+const calcAge = function (birthDay){
+    return 2037- birthDay;
 }
-console.log(yearsParaAposentar(1991, "João Marco"));
 
+const yearsUntilRetirement = function (birthDay, firstName) {
+    const age = calcAge(birthDay)
+    const retirement = 65 - age;
 
+if (retirement > 0){
+    console.log(`${firstName} irá se aposentar daqui a ${retirement} anos.`);
+    return retirement;
+} else {
+    console.log(`${firstName} já se aposentou. 🎉`);
+    return -1;
+    }
+}
 
-
-
-
-
-
-
+console.log(yearsUntilRetirement(1999, "João"));
+console.log(yearsUntilRetirement(1950, "Jonas"));
