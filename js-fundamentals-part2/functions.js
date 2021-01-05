@@ -209,15 +209,55 @@
 
 //AGORA COLANDO DO PROFESSOR
 
-const calcTip = function (bill) {
-    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const calcTip = function (bill) {
+//     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+
+// const bill = [125, 555, 44];
+// const tips = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
+
+// const totals = [bill[0] + tips[0], bill[1] + tips[1], bill[2] + tips[2]];
+
+// console.log(bill, tips, totals);
+
+
+// Introdução a Objetos
+
+//Array Básica -> Primeira estrutara de dados que aprendemos.
+
+const jonasArray = [
+    'Jonas',
+    'Schmenmann',
+    2020 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+
+
+// Objeto
+const joao = {
+    firstName: 'João',
+    lastName: 'Marco',
+    age: 2020 - 1999,
+    job: 'Freelancer',
+    friends: ['Leonardo', 'Luiz', 'Ramon']
+};
+
+console.log(joao.lastName);
+console.log(joao['lastName']);
+
+const nameKey = 'Name';
+console.log(joao['first' + nameKey]);
+console.log(joao['last' + nameKey]);
+
+
+const interessadoEm = prompt('O que você quer saber sobre o João Marco? Escolha firstName, lastName, age, job, friends');
+
+
+if (joao[interessadoEm]) {
+    console.log(joao[interessadoEm]);
+} else {
+    console.log("Pergunta errada! Escolha firstName, lastName, age, job, friends.")
 }
-
-const bill = [125, 555, 44];
-const tips = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
-
-const totals = [bill[0] + tips[0], bill[1] + tips[1], bill[2] + tips[2]];
-
-console.log(bill, tips, totals);
 
 
