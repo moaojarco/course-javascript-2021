@@ -77,8 +77,8 @@
 // }
 
 // const yearsUntilRetirement = function (birthDay, firstName) {
-//     const age = calcAge(birthDay)
-//     const retirement = 65 - age;
+    //     const age = calcAge(birthDay)
+    //     const retirement = 65 - age;
 
 // if (retirement > 0){
 //     console.log(`${firstName} irá se aposentar daqui a ${retirement} anos.`);
@@ -96,28 +96,77 @@
 
 //Code Challenge Functions #01
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
 
-//Teste 01
-let scoreDolphins = calcAverage(44,23,71);
-let scoreKoalas = calcAverage(65,54,49);
+// //Teste 01
+// let scoreDolphins = calcAverage(44,23,71);
+// let scoreKoalas = calcAverage(65,54,49);
 
 
-const checkWinner = function(avgDolphins, avgKoalas){
-    if (avgDolphins >= 2 * avgKoalas){
-        console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
-    } else if (avgKoalas >= 2 * avgDolphins){
-        console.log(`Dolphins win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
-    } else{
-        console.log('Nenhum time ganhou!');
-    }
-}
+// const checkWinner = function(avgDolphins, avgKoalas){
+//     if (avgDolphins >= 2 * avgKoalas){
+//         console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
+//     } else if (avgKoalas >= 2 * avgDolphins){
+//         console.log(`Dolphins win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
+//     } else{
+//         console.log('Nenhum time ganhou!');
+//     }
+// }
+// // checkWinner(scoreDolphins, scoreKoalas);
+
+// //Teste 02
+
+// scoreDolphins = calcAverage(85,54,41);
+// scoreKoalas = calcAverage(23,34,27);
+
+// console.log(scoreDolphins, scoreKoalas);
 // checkWinner(scoreDolphins, scoreKoalas);
 
-//Teste 02
 
-scoreDolphins = calcAverage(85,54,41);
-scoreKoalas = calcAverage(23,34,27);
+//Começando com arrays
 
-console.log(scoreDolphins, scoreKoalas);
-checkWinner(scoreDolphins, scoreKoalas);
+// const friends = ["Leonardo", "Ramon", "Luiz"];
+
+// console.log(friends[friends.length -1]); //Retorna Luiz
+
+// const primeiroNome = 'João';
+// const moao = [primeiroNome, 'Marco', 2020 - 1999, 'student', friends];
+// console.log(moao);
+// console.log(moao.length);
+
+
+// const calcAge = function (birthDay){
+    //     return 2020- birthDay;
+    // }
+    
+    // const years = [1973, 1990, 1999, 2002, 2006, 2012];
+    
+    // const age1 = calcAge(years[0]);
+    // const age2 = calcAge(years[2]);
+    // const age3 = calcAge(years[years.length - 1]);
+    // console.log(age1, age2, age3);
+    
+    
+    // const newAges = [calcAge(years[0]), calcAge(years[2]), calcAge(years[years.length - 1])];
+    // console.log(newAges);
+    
+
+
+    const friends = ["Michael", "Steven", "Peter"];
+    console.log(friends);
+    
+    //Add elements
+    friends.push('Jay'); // Adiciona um elemento no final de um array.
+    console.log(friends);
+
+    friends.unshift('John'); // Adiciona um elemento no começo de um array.
+    console.log(friends);
+
+    //Remove elements
+    friends.pop(); // Last
+    const popped = friends.pop();
+    console.log(popped);
+    console.log(friends);
+
+    friends.shift();
+    console.log(friends);
