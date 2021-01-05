@@ -63,8 +63,8 @@
 // function fruitProcessor(apples, oranges){
 //     const applePieces = cutPieces(apples);
 //     const orangePieces = cutPieces(oranges);
-    
-    
+
+
 //     const juice =  `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges.`;
 //     return juice;
 // }
@@ -77,8 +77,8 @@
 // }
 
 // const yearsUntilRetirement = function (birthDay, firstName) {
-    //     const age = calcAge(birthDay)
-    //     const retirement = 65 - age;
+//     const age = calcAge(birthDay)
+//     const retirement = 65 - age;
 
 // if (retirement > 0){
 //     console.log(`${firstName} irá se aposentar daqui a ${retirement} anos.`);
@@ -136,37 +136,88 @@
 
 
 // const calcAge = function (birthDay){
-    //     return 2020- birthDay;
-    // }
-    
-    // const years = [1973, 1990, 1999, 2002, 2006, 2012];
-    
-    // const age1 = calcAge(years[0]);
-    // const age2 = calcAge(years[2]);
-    // const age3 = calcAge(years[years.length - 1]);
-    // console.log(age1, age2, age3);
-    
-    
-    // const newAges = [calcAge(years[0]), calcAge(years[2]), calcAge(years[years.length - 1])];
-    // console.log(newAges);
-    
+//     return 2020- birthDay;
+// }
+
+// const years = [1973, 1990, 1999, 2002, 2006, 2012];
+
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[2]);
+// const age3 = calcAge(years[years.length - 1]);
+// console.log(age1, age2, age3);
 
 
-    const friends = ["Michael", "Steven", "Peter"];
-    console.log(friends);
-    
-    //Add elements
-    friends.push('Jay'); // Adiciona um elemento no final de um array.
-    console.log(friends);
+// const newAges = [calcAge(years[0]), calcAge(years[2]), calcAge(years[years.length - 1])];
+// console.log(newAges);
 
-    friends.unshift('John'); // Adiciona um elemento no começo de um array.
-    console.log(friends);
 
-    //Remove elements
-    friends.pop(); // Last
-    const popped = friends.pop();
-    console.log(popped);
-    console.log(friends);
 
-    friends.shift();
-    console.log(friends);
+// const friends = ["Michael", "Steven", "Peter"];
+// console.log(friends);
+
+// //Add elements
+// friends.push('Jay'); // Adiciona um elemento no final de um array.
+// console.log(friends);
+
+// friends.unshift('John'); // Adiciona um elemento no começo de um array.
+// console.log(friends);
+
+// //Remove elements
+// friends.pop(); // Last
+// const popped = friends.pop();
+// console.log(popped);
+// console.log(friends);
+
+// friends.shift();
+// console.log(friends);
+
+
+// const amigos = ["Ramon", "Leonardo", "Luiz"];
+// amigos.push('Paima');
+
+// if (amigos.includes("Paima")) {
+//     console.log("Tu é amigo do gordão mesmo.");
+// } else {
+//     console.log("Tu não é amigo do Paima mano.");
+// }
+
+
+
+
+
+
+//CODE CHALLENGE #02 (MEU PRIMEIRO TESTE)
+
+// function calcTip(num) {
+//     if (num >= 50 && num <= 300) {
+//         num * 0.15;
+//     console.log(num);
+//     } else {
+//         num * 0.2;
+//         console.log(num);
+//     }
+// }
+
+// const bill = [125, 555, 44];
+
+// const tips = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
+// console.log(total);
+
+// const total = bill + tips;
+
+
+
+//AGORA COLANDO DO PROFESSOR
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bill = [125, 555, 44];
+const tips = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
+
+const totals = [bill[0] + tips[0], bill[1] + tips[1], bill[2] + tips[2]];
+
+console.log(bill, tips, totals);
+
+
