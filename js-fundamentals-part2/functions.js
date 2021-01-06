@@ -273,45 +273,78 @@
 
 // console.log(`${joao.firstName} tem ${joao.friends.length} amigos, e o melhor amigo dele se chama ${joao.friends[0]}`);
 
-const joao = {
-    firstName: 'João',
-    lastName: 'Marco',
-    birthYear: 1999,
-    job: 'Freelancer',
-    friends: ['Leonardo', 'Luiz', 'Ramon'],
-    temCarteira: false,
+// const joao = {
+//     firstName: 'João',
+//     lastName: 'Marco',
+//     birthYear: 1999,
+//     job: 'Freelancer',
+//     friends: ['Leonardo', 'Luiz', 'Ramon'],
+//     temCarteira: false,
 
-    // calcAge: function (birthYear) {
-    //     return 2020 - birthYear;
-    // }
+// calcAge: function (birthYear) {
+//     return 2020 - birthYear;
+// }
 
-    // calcAge: function () {
-    //     return 2020 - this.birthYear;
-    // }
+// calcAge: function () {
+//     return 2020 - this.birthYear;
+// }
 
-    calcAge: function () {
-        this.age = 2020 - this.birthYear;
-        return this.age;
-    },
+//     calcAge: function () {
+//         this.age = 2020 - this.birthYear;
+//         return this.age;
+//     },
 
-    //Challenge
-    //Resultado do Professor
+//     //Challenge
+//     //Resultado do Professor
 
-    getSummary: function () {
-        return `${this.firstName} tem ${this.calcAge()} anos, é ${this.job}, Carteira de motorista: ${this.temCarteira ? 'tem' : 'não tem'}`;
-    },
-};
-console.log(joao.getSummary());
-console.log(joao.calcAge());
+//     getSummary: function () {
+//         return `${this.firstName} tem ${this.calcAge()} anos, é ${this.job}, Carteira de motorista: ${this.temCarteira ? 'tem' : 'não tem'}`;
+//     },
+// };
+// console.log(joao.getSummary());
+// console.log(joao.calcAge());
 
-console.log(joao.age);
+// console.log(joao.age);
 
-//Challenge
-//Minha tentativa
+// //Challenge
+// //Minha tentativa
 
-joao.getSummary = `${joao.firstName} tem ${joao.age} anos, é ${joao.job}, Carteira de motorista: ${joao.temCarteira ? 'tem' : 'não tem'}`;
+// joao.getSummary = `${joao.firstName} tem ${joao.age} anos, é ${joao.job}, Carteira de motorista: ${joao.temCarteira ? 'tem' : 'não tem'}`;
 
-console.log(joao.getSummary);
+// console.log(joao.getSummary);
 
 
+const mark = {
+    fullName: 'Mark Zuckeberg',
+    mass: 78,
+    height: 1.69,
 
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+const john = {
+    fullName: 'John Travolta',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+mark.calcBMI();
+john.calcBMI();
+
+console.log(mark.bmi, john.bmi);
+
+//"John Travolta  BMI (28.3) is higher than Mark Zuckeberg (23.9)!"
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName} BMI (${mark.bmi}) é maior que o de ${john.fullName} (${john.bmi})`);
+} else if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName} BMI (${john.bmi}) é maior que o de ${mark.fullName} (${mark.bmi})`);
+}
