@@ -225,39 +225,93 @@
 
 //Array Básica -> Primeira estrutara de dados que aprendemos.
 
-const jonasArray = [
-    'Jonas',
-    'Schmenmann',
-    2020 - 1991,
-    'teacher',
-    ['Michael', 'Peter', 'Steven']
-];
+// const jonasArray = [
+//     'Jonas',
+//     'Schmenmann',
+//     2020 - 1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven']
+// ];
 
 
 // Objeto
+// const joao = {
+//     firstName: 'João',
+//     lastName: 'Marco',
+//     age: 2020 - 1999,
+//     job: 'Freelancer',
+//     friends: ['Leonardo', 'Luiz', 'Ramon']
+// };
+
+// console.log(joao.lastName);
+// console.log(joao['lastName']);
+
+// const nameKey = 'Name';
+// console.log(joao['first' + nameKey]);
+// console.log(joao['last' + nameKey]);
+
+
+// const interessadoEm = prompt('O que você quer saber sobre o João Marco? Escolha firstName, lastName, age, job, friends');
+
+
+// if (joao[interessadoEm]) {
+//     console.log(joao[interessadoEm]);
+// } else {
+//     console.log("Pergunta errada! Escolha firstName, lastName, age, job, friends.")
+// }
+
+//Adicionando propriedades ao objeto
+
+// joao.favoriteTeam = 'miBR';
+// joao['twitter'] = '@moaojarco';
+
+// console.log(joao.twitter)
+
+
+//Challenge 
+//João tem 3 amigos, e o melhor amigo dele se chama Leonardo.
+
+// console.log(`${joao.firstName} tem ${joao.friends.length} amigos, e o melhor amigo dele se chama ${joao.friends[0]}`);
+
 const joao = {
     firstName: 'João',
     lastName: 'Marco',
-    age: 2020 - 1999,
+    birthYear: 1999,
     job: 'Freelancer',
-    friends: ['Leonardo', 'Luiz', 'Ramon']
+    friends: ['Leonardo', 'Luiz', 'Ramon'],
+    temCarteira: false,
+
+    // calcAge: function (birthYear) {
+    //     return 2020 - birthYear;
+    // }
+
+    // calcAge: function () {
+    //     return 2020 - this.birthYear;
+    // }
+
+    calcAge: function () {
+        this.age = 2020 - this.birthYear;
+        return this.age;
+    },
+
+    //Challenge
+    //Resultado do Professor
+
+    getSummary: function () {
+        return `${this.firstName} tem ${this.calcAge()} anos, é ${this.job}, Carteira de motorista: ${this.temCarteira ? 'tem' : 'não tem'}`;
+    },
 };
+console.log(joao.getSummary());
+console.log(joao.calcAge());
 
-console.log(joao.lastName);
-console.log(joao['lastName']);
+console.log(joao.age);
 
-const nameKey = 'Name';
-console.log(joao['first' + nameKey]);
-console.log(joao['last' + nameKey]);
+//Challenge
+//Minha tentativa
 
+joao.getSummary = `${joao.firstName} tem ${joao.age} anos, é ${joao.job}, Carteira de motorista: ${joao.temCarteira ? 'tem' : 'não tem'}`;
 
-const interessadoEm = prompt('O que você quer saber sobre o João Marco? Escolha firstName, lastName, age, job, friends');
+console.log(joao.getSummary);
 
-
-if (joao[interessadoEm]) {
-    console.log(joao[interessadoEm]);
-} else {
-    console.log("Pergunta errada! Escolha firstName, lastName, age, job, friends.")
-}
 
 
