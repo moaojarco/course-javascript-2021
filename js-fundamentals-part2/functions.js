@@ -314,37 +314,59 @@
 // console.log(joao.getSummary);
 
 
-const mark = {
-    fullName: 'Mark Zuckeberg',
-    mass: 78,
-    height: 1.69,
+// const mark = {
+//     fullName: 'Mark Zuckeberg',
+//     mass: 78,
+//     height: 1.69,
 
-    calcBMI: function () {
-        this.bmi = this.mass / this.height ** 2;
-        return this.bmi;
-    }
-}
+//     calcBMI: function () {
+//         this.bmi = this.mass / this.height ** 2;
+//         return this.bmi;
+//     }
+// }
 
-const john = {
-    fullName: 'John Travolta',
-    mass: 92,
-    height: 1.95,
+// const john = {
+//     fullName: 'John Travolta',
+//     mass: 92,
+//     height: 1.95,
 
-    calcBMI: function () {
-        this.bmi = this.mass / this.height ** 2;
-        return this.bmi;
-    }
-}
+//     calcBMI: function () {
+//         this.bmi = this.mass / this.height ** 2;
+//         return this.bmi;
+//     }
+// }
 
-mark.calcBMI();
-john.calcBMI();
+// mark.calcBMI();
+// john.calcBMI();
 
-console.log(mark.bmi, john.bmi);
+// console.log(mark.bmi, john.bmi);
 
-//"John Travolta  BMI (28.3) is higher than Mark Zuckeberg (23.9)!"
+// //"John Travolta  BMI (28.3) is higher than Mark Zuckeberg (23.9)!"
 
-if (mark.bmi > john.bmi) {
-    console.log(`${mark.fullName} BMI (${mark.bmi}) é maior que o de ${john.fullName} (${john.bmi})`);
-} else if (john.bmi > mark.bmi) {
-    console.log(`${john.fullName} BMI (${john.bmi}) é maior que o de ${mark.fullName} (${mark.bmi})`);
-}
+// if (mark.bmi > john.bmi) {
+//     console.log(`${mark.fullName} BMI (${mark.bmi}) é maior que o de ${john.fullName} (${john.bmi})`);
+// } else if (john.bmi > mark.bmi) {
+//     console.log(`${john.fullName} BMI (${john.bmi}) é maior que o de ${mark.fullName} (${mark.bmi})`);
+// }
+
+
+//  Aprofundando nos Loop's (LOOPS LOOPS LLOOPS LOOPS LOOPS)
+
+// console.log("levantamento de peso repetição 1 🏋️‍♂️");
+// console.log("levantamento de peso repetição 2 🏋️‍♂️");
+// console.log("levantamento de peso repetição 3 🏋️‍♂️");
+// console.log("levantamento de peso repetição 4 🏋️‍♂️");
+// console.log("levantamento de peso repetição 5 🏋️‍♂️");
+// console.log("levantamento de peso repetição 6 🏋️‍♂️");
+// console.log("levantamento de peso repetição 7 🏋️‍♂️");
+// console.log("levantamento de peso repetição 8 🏋️‍♂️");
+// console.log("levantamento de peso repetição 9 🏋️‍♂️");
+// console.log("levantamento de peso repetição 10 🏋️‍♂️");
+
+// For (Este loop tem um contador)
+// a Instrução de Loop tem três etapas
+
+// for loops continuam rodando enquanto a condição for TRUE
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Levantamento de peso repetição ${rep} 🏋️‍♂️`);
+};
