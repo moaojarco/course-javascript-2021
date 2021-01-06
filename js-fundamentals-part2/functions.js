@@ -367,6 +367,65 @@
 // a Instrução de Loop tem três etapas
 
 // for loops continuam rodando enquanto a condição for TRUE
-for (let rep = 1; rep <= 10; rep++) {
-    console.log(`Levantamento de peso repetição ${rep} 🏋️‍♂️`);
-};
+
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Levantamento de peso repetição ${rep} 🏋️‍♂️`);
+// };
+
+
+
+// Loop em Arrays
+
+// const jonas = [
+//     'Jonas',
+//     'Schmenmann',
+//     2020 - 1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven'],
+//     true
+// ];
+
+// const types = [];
+
+// for (let i = 0; i < jonas.length; i++) {
+//     //Lendo do jonas array
+//     console.log(jonas[i], typeof jonas[i]);
+
+//     //Preenchendo tipos de array
+//     // types[i] = typeof jonas[i];
+
+//     types.push(typeof jonas[i]);
+// };
+
+// console.log(types);
+
+// // Criando uma array a partir de um loop.
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//     ages.push(2037 - years[i])
+// }
+
+// console.log(ages);
+
+
+
+// //continue  and  break
+
+// console.log('---- ONLY STRINGS ----');
+// for (let i = 0; i < jonas.length; i++) {
+//     if (typeof jonas[i] !== 'string') continue;
+
+//     console.log(jonas[i], typeof jonas[i]);
+// };
+
+
+// console.log('---- BREAK WITH NUMBERS ------');
+// for (let i = 0; i < jonas.length; i++) {
+//     if (typeof jonas[i] === 'number') break;
+
+//     console.log(jonas[i], typeof jonas[i]);
+// };
+
