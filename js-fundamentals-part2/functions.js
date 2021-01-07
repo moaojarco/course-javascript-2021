@@ -429,3 +429,37 @@
 //     console.log(jonas[i], typeof jonas[i]);
 // };
 
+
+//Loop Inverso
+
+const jonas = [
+    'Jonas',
+    'Schmenmann',
+    2020 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+];
+
+// 0, 1, ... , 4 -> Ordem crescente
+// 4, 3, ..., 0 -> Ordem decrescente
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+    console.log(jonas[i])
+}
+
+//Loop dentro de loop
+for (let exercise = 1; exercise <= 3; exercise++) {
+    console.log(`---------- Starting Exercise ------------${exercise}`)
+
+    for (let rep = 1; rep <= 5; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weight repeitition ${rep} 🏋️‍♂️`)
+    }
+}
+
+
+
+
+
+
+
+
