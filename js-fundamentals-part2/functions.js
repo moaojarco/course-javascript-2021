@@ -395,12 +395,12 @@
 //     // types[i] = typeof jonas[i];
 
 //     types.push(typeof jonas[i]);
+
 // };
 
 // console.log(types);
 
 // // Criando uma array a partir de um loop.
-
 // const years = [1991, 2007, 1969, 2020];
 // const ages = [];
 
@@ -443,22 +443,46 @@ const jonas = [
 // 0, 1, ... , 4 -> Ordem crescente
 // 4, 3, ..., 0 -> Ordem decrescente
 
-for (let i = jonas.length - 1; i >= 0; i--) {
-    console.log(jonas[i])
-}
+// for (let i = jonas.length - 1; i >= 0; i--) {
+//     console.log(jonas[i])
+// }
 
-//Loop dentro de loop
-for (let exercise = 1; exercise <= 3; exercise++) {
-    console.log(`---------- Starting Exercise ------------${exercise}`)
+// //Loop dentro de loop
+// for (let exercise = 1; exercise <= 3; exercise++) {
+//     console.log(`---------- Starting Exercise ------------${exercise}`)
 
-    for (let rep = 1; rep <= 5; rep++) {
-        console.log(`Exercise ${exercise}: Lifting weight repeitition ${rep} 🏋️‍♂️`)
+//     for (let rep = 1; rep <= 5; rep++) {
+//         console.log(`Exercise ${exercise}: Lifting weight repeitition ${rep} 🏋️‍♂️`)
+//     }
+// }
+
+
+
+// While (Este loop tem um contador)
+
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Levantamento de peso repetição ${rep} 🏋️‍♂️`);
+// };
+
+
+// let rep = 1;
+// while (rep <= 10) {
+//     console.log(`Levantamento de peso repetição ${rep} 🏋️‍♂️`);
+//     rep++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`Você tirou ${dice} no dado. Tente novamente`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    //Se o número gerado primeiro for 6, o loop não será iniciado.
+
+    //Aqui conseguimos registrar quando o lado 6 chegar.
+    if (dice === 6) {
+        console.log(`Você tirou um ${dice} no dado. Parabéns! 🚀`);
     }
 }
-
-
-
-
 
 
 
