@@ -471,19 +471,49 @@ const jonas = [
 //     rep++;
 // }
 
-let dice = Math.trunc(Math.random() * 6) + 1;
+// let dice = Math.trunc(Math.random() * 6) + 1;
 
-while (dice !== 6) {
-    console.log(`Você tirou ${dice} no dado. Tente novamente`);
-    dice = Math.trunc(Math.random() * 6) + 1;
-    //Se o número gerado primeiro for 6, o loop não será iniciado.
+// while (dice !== 6) {
+//     console.log(`Você tirou ${dice} no dado. Tente novamente`);
+//     dice = Math.trunc(Math.random() * 6) + 1;
+//     //Se o número gerado primeiro for 6, o loop não será iniciado.
 
-    //Aqui conseguimos registrar quando o lado 6 chegar.
-    if (dice === 6) {
-        console.log(`Você tirou um ${dice} no dado. Parabéns! 🚀`);
-    }
+//     //Aqui conseguimos registrar quando o lado 6 chegar.
+//     if (dice === 6) {
+//         console.log(`Você tirou um ${dice} no dado. Parabéns! 🚀`);
+//     }
+// }
+
+
+//CODE CHALLENGE #04
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
 
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips = [];
+let totals = [];
 
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]); //Jeito do professor
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+    // tip.push(calcTip(bills[i])); MEU JEITO
+    // totals.push(bills[i] + tip[i]);
+}
+// console.log(bills, tips, totals);
 
+//BONUS 
 
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+
+    return sum / arr.length;
+}
+
+console.log(calcAverage([2, 3, 7]))
+console.log(calcAverage(totals));
