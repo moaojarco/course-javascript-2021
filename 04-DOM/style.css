@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   color: #eee;
   background-color: #222;
   /* background-color: #60b347; */
@@ -22,7 +22,7 @@ body {
 header {
   position: relative;
   height: 35vh;
-  border-bottom: 7px solid #eee;
+  border-bottom: 2px solid rgb(82, 82, 82);
 }
 
 main {
@@ -38,6 +38,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 2rem;
 }
 
 .right {
@@ -47,7 +48,7 @@ main {
 
 /* ELEMENTS STYLE */
 h1 {
-  font-size: 4rem;
+  font-size: 2rem;
   text-align: center;
   position: absolute;
   width: 100%;
@@ -56,16 +57,33 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+.img {
+  width: 200px;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+}
+
+img.img::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100px;
+  width: 10px;
+  height: 5px;
+  background-color: rgb(255, 0, 0);
+}
+
 .number {
   background: #eee;
   color: #333;
-  font-size: 6rem;
-  width: 15rem;
-  padding: 3rem 0rem;
+  font-size: 5rem;
+  width: 10rem;
+  padding: 1.5rem 0rem;
   text-align: center;
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, 50%);
 }
 
@@ -92,6 +110,7 @@ h1 {
   width: 25rem;
   text-align: center;
   display: block;
+  margin-top: 5rem;
   margin-bottom: 3rem;
 }
 
@@ -110,10 +129,12 @@ h1 {
 }
 
 .message {
-  margin-bottom: 8rem;
-  height: 3rem;
+  margin: 0 120px 90px 0;
+  height: 2rem;
+  width: 400px;
 }
 
 .label-score {
+  margin-top: 20px;
   margin-bottom: 2rem;
 }
