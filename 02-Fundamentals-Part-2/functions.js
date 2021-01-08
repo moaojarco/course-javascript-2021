@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // function logger(){
 //     console.log("My name is João");
@@ -7,7 +7,6 @@
 // logger();
 // logger();
 // logger();
-
 
 // function fruitProcessor(apple, oranges){
 //     const juice =  `Juice with ${apple} apples and ${oranges} oranges.`;
@@ -28,8 +27,6 @@
 // console.log(calcPorc(1000000));
 // console.log(calcPorc(300));
 // console.log(calcPorc(1000));
-
-
 
 //Arrow Function com 1 parametro + 1 linha de código
 // const calcAge3 = birthDay => 2037 - birthDay;
@@ -53,7 +50,6 @@
 // }
 // console.log(yearsParaAposentar(1991, "João Marco"));
 
-
 //Chamando uma função dentro de função
 
 // function cutPieces(fruit){
@@ -64,13 +60,11 @@
 //     const applePieces = cutPieces(apples);
 //     const orangePieces = cutPieces(oranges);
 
-
 //     const juice =  `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges.`;
 //     return juice;
 // }
 
 // console.log(fruitProcessor(2,3));
-
 
 // const calcAge = function (birthDay){
 //     return 2037- birthDay;
@@ -92,8 +86,6 @@
 // console.log(yearsUntilRetirement(1999, "João"));
 // console.log(yearsUntilRetirement(1950, "Jonas"));
 
-
-
 //Code Challenge Functions #01
 
 // const calcAverage = (a, b, c) => (a + b + c) / 3;
@@ -101,7 +93,6 @@
 // //Teste 01
 // let scoreDolphins = calcAverage(44,23,71);
 // let scoreKoalas = calcAverage(65,54,49);
-
 
 // const checkWinner = function(avgDolphins, avgKoalas){
 //     if (avgDolphins >= 2 * avgKoalas){
@@ -122,7 +113,6 @@
 // console.log(scoreDolphins, scoreKoalas);
 // checkWinner(scoreDolphins, scoreKoalas);
 
-
 //Começando com arrays
 
 // const friends = ["Leonardo", "Ramon", "Luiz"];
@@ -133,7 +123,6 @@
 // const moao = [primeiroNome, 'Marco', 2020 - 1999, 'student', friends];
 // console.log(moao);
 // console.log(moao.length);
-
 
 // const calcAge = function (birthDay){
 //     return 2020- birthDay;
@@ -146,11 +135,8 @@
 // const age3 = calcAge(years[years.length - 1]);
 // console.log(age1, age2, age3);
 
-
 // const newAges = [calcAge(years[0]), calcAge(years[2]), calcAge(years[years.length - 1])];
 // console.log(newAges);
-
-
 
 // const friends = ["Michael", "Steven", "Peter"];
 // console.log(friends);
@@ -171,7 +157,6 @@
 // friends.shift();
 // console.log(friends);
 
-
 // const amigos = ["Ramon", "Leonardo", "Luiz"];
 // amigos.push('Paima');
 
@@ -180,11 +165,6 @@
 // } else {
 //     console.log("Tu não é amigo do Paima mano.");
 // }
-
-
-
-
-
 
 //CODE CHALLENGE #02 (MEU PRIMEIRO TESTE)
 
@@ -205,8 +185,6 @@
 
 // const total = bill + tips;
 
-
-
 //AGORA COLANDO DO PROFESSOR
 
 // const calcTip = function (bill) {
@@ -220,7 +198,6 @@
 
 // console.log(bill, tips, totals);
 
-
 // Introdução a Objetos
 
 //Array Básica -> Primeira estrutara de dados que aprendemos.
@@ -232,7 +209,6 @@
 //     'teacher',
 //     ['Michael', 'Peter', 'Steven']
 // ];
-
 
 // Objeto
 // const joao = {
@@ -250,9 +226,7 @@
 // console.log(joao['first' + nameKey]);
 // console.log(joao['last' + nameKey]);
 
-
 // const interessadoEm = prompt('O que você quer saber sobre o João Marco? Escolha firstName, lastName, age, job, friends');
-
 
 // if (joao[interessadoEm]) {
 //     console.log(joao[interessadoEm]);
@@ -267,8 +241,7 @@
 
 // console.log(joao.twitter)
 
-
-//Challenge 
+//Challenge
 //João tem 3 amigos, e o melhor amigo dele se chama Leonardo.
 
 // console.log(`${joao.firstName} tem ${joao.friends.length} amigos, e o melhor amigo dele se chama ${joao.friends[0]}`);
@@ -313,7 +286,6 @@
 
 // console.log(joao.getSummary);
 
-
 // const mark = {
 //     fullName: 'Mark Zuckeberg',
 //     mass: 78,
@@ -349,7 +321,6 @@
 //     console.log(`${john.fullName} BMI (${john.bmi}) é maior que o de ${mark.fullName} (${mark.bmi})`);
 // }
 
-
 //  Aprofundando nos Loop's (LOOPS LOOPS LLOOPS LOOPS LOOPS)
 
 // console.log("levantamento de peso repetição 1 🏋️‍♂️");
@@ -371,8 +342,6 @@
 // for (let rep = 1; rep <= 10; rep++) {
 //     console.log(`Levantamento de peso repetição ${rep} 🏋️‍♂️`);
 // };
-
-
 
 // Loop em Arrays
 
@@ -410,8 +379,6 @@
 
 // console.log(ages);
 
-
-
 // //continue  and  break
 
 // console.log('---- ONLY STRINGS ----');
@@ -421,7 +388,6 @@
 //     console.log(jonas[i], typeof jonas[i]);
 // };
 
-
 // console.log('---- BREAK WITH NUMBERS ------');
 // for (let i = 0; i < jonas.length; i++) {
 //     if (typeof jonas[i] === 'number') break;
@@ -429,15 +395,14 @@
 //     console.log(jonas[i], typeof jonas[i]);
 // };
 
-
 //Loop Inverso
 
 const jonas = [
-    'Jonas',
-    'Schmenmann',
-    2020 - 1991,
-    'teacher',
-    ['Michael', 'Peter', 'Steven'],
+  "Jonas",
+  "Schmenmann",
+  2020 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
 ];
 
 // 0, 1, ... , 4 -> Ordem crescente
@@ -456,14 +421,11 @@ const jonas = [
 //     }
 // }
 
-
-
 // While (Este loop tem um contador)
 
 // for (let rep = 1; rep <= 10; rep++) {
 //     console.log(`Levantamento de peso repetição ${rep} 🏋️‍♂️`);
 // };
-
 
 // let rep = 1;
 // while (rep <= 10) {
@@ -484,36 +446,35 @@ const jonas = [
 //     }
 // }
 
-
 //CODE CHALLENGE #04
 
 const calcTip = function (bill) {
-    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-}
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
 
 let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 let tips = [];
 let totals = [];
 
 for (let i = 0; i < bills.length; i++) {
-    const tip = calcTip(bills[i]); //Jeito do professor
-    tips.push(tip);
-    totals.push(tip + bills[i]);
-    // tip.push(calcTip(bills[i])); MEU JEITO
-    // totals.push(bills[i] + tip[i]);
+  const tip = calcTip(bills[i]); //Jeito do professor
+  tips.push(tip);
+  totals.push(tip + bills[i]);
+  // tip.push(calcTip(bills[i])); MEU JEITO
+  // totals.push(bills[i] + tip[i]);
 }
 // console.log(bills, tips, totals);
 
-//BONUS 
+//BONUS
 
 const calcAverage = function (arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
 
-    return sum / arr.length;
-}
+  return sum / arr.length;
+};
 
-console.log(calcAverage([2, 3, 7]))
+console.log(calcAverage([2, 3, 7]));
 console.log(calcAverage(totals));

@@ -32,24 +32,26 @@
 
 // Exercicio 2
 
-const animeList = ["Dragon Ball", "Naruto", "Inuyasha", "Ben 10", "One Piece"];
+// const animeList = ["Dragon Ball", "Naruto", "Inuyasha", "Ben 10", "One Piece"];
 
-const title = document.querySelector(".title");
-const novoAnime = document.querySelector("#new-anime");
-const btnAdd = document.querySelector(".add");
-const btnRemove = document.querySelector(".remove");
-console.log(animeList);
+// const title = document.querySelector(".title");
+// const novoAnime = document.querySelector("#new-anime");
+// const btnAdd = document.querySelector(".add");
+// const btnRemove = document.querySelector(".remove");
+// console.log(animeList);
 
-btnAdd.addEventListener("click", () => {
-  const newAnime = novoAnime.value;
-  animeList.push(newAnime);
-  title.innerHTML = `<li class="list">${animeList}</li>`;
-  console.log(animeList);
-});
+// btnAdd.addEventListener("click", () => {
+//   const newAnime = novoAnime.value;
+//   animeList.push(newAnime);
+//   title.innerHTML = `<li class="list">${animeList}</li>`;
+//   console.log(animeList);
+// });
 
-btnRemove.addEventListener("click", () => {
-  animeList.pop([animeList].length - 1);
-  title.innerHTML = animeList;
-  console.log(animeList);
-});
+// btnRemove.addEventListener("click", () => {
+//   animeList.pop([animeList].length - 1);
+//   title.innerHTML = animeList;
+//   console.log(animeList);
+// });
 // title.innerHTML = animeList;
+
+//Pensando como um desenvolvedor (RESOLVER PROBLEMAS! 👩‍💻)
