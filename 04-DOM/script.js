@@ -8,11 +8,17 @@
 // document.querySelector('.guess').value = 23;
 // console.log(document.querySelector('.guess').value);
 
-const secretNumber = Math.floor(1 + Math.random() * 20);
+let secretNumber = Math.trunc(Math.random() * 20);
+let score = (document.querySelector('.score').textContent = 20);
+let highScore = (document.querySelector('.highscore').textContent = 0);
+let again = document.querySelector('.again');
+
+// document.querySelector('.number').textContent = secretNumber;
 console.log(secretNumber);
 document.querySelector('.check').addEventListener('click', () => {
   const guess = Number(document.querySelector('.guess').value);
-  // console.log(guess, typeof guess);
+  const img = document.querySelector('.img');
+
   if (guess < secretNumber) {
     document.querySelector('.message').textContent = 'Um pouco mais...';
   } else {
@@ -22,14 +28,33 @@ document.querySelector('.check').addEventListener('click', () => {
   if (!guess) {
     document.querySelector('.message').textContent =
       'Sem gracinhas, eu disse pra adivinhar um número.';
-    const img = document.querySelector('.img');
     img.src = './mightguy-not.jpg';
-  } else if (guess === secretNumber) {
+  }
+
+  if (guess != secretNumber) {
+    score = score - 1;
+    document.querySelector('.score').textContent = `${score}`;
+  }
+
+  if (guess === secretNumber) {
     document.querySelector('.message').textContent =
-      'Co-como assim? Você acertou o meu número secreto!!!.';
-    const img = document.querySelector('.img');
+      'Co-como assim? Você acertou o meu número secreto!!!';
     img.src = './mightguy-done.jpg';
 
-    document.querySelector('.score').textContent = guess;
+    score = document.querySelector('.highscore').textContent = `${
+      score + highScoreLocal
+    }`;
+
+    localStorage.setItem('highScore', `${score}`);
   }
+});
+
+let highScoreLocal = Number(localStorage.getItem('highScore'));
+document.querySelector('.highscore').textContent = `${highScoreLocal}`;
+
+again.addEventListener('click', () => {
+  document.querySelector('.score').textContent = 20;
+  document.querySelector('.highscore').textContent = 0;
+
+  localStorage.removeItem('highScore');
 });
