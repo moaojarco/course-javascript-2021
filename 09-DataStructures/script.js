@@ -62,7 +62,7 @@ const passageiroCorrect =
   passageiroLower[0].toUpperCase() + passageiroLower.slice(1);
 console.log(passageiroCorrect); // retorna Marco
 
-const btn = document.querySelector('#btn');
+// const btn = document.querySelector('#btn');
 const txtEmail = document.querySelector('#email');
 
 const checkPassageiro = function () {
@@ -89,7 +89,7 @@ console.log(anuncio.replace('porta', 'portão'));
 //Criando uma expressão regular
 console.log(anuncio.replace(/porta/g, 'portão'));
 
-btn.addEventListener('click', checkPassageiro);
+// btn.addEventListener('click', checkPassageiro);
 
 //Booleans
 const plane = 'Airbus A320neo';
@@ -335,12 +335,61 @@ const [i, , [j, k]] = nested;
 const [p = 1, q = 1, r = 1] = [8, 9]; // Retorna 8 9 1
 // console.log(p, q, r); // terceiro elemento retorna undefined
 
-const btnTop = document.querySelector('#scroll-top');
+// const btnTop = document.querySelector('#scroll-top');
 
-btnTop.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: 'smooth',
-  });
+// btnTop.addEventListener('click', () => {
+//   window.scrollTo({
+//     top: 0,
+//     left: 0,
+//     behavior: 'smooth',
+//   });
+// });
+
+///////////////////////////////////////
+// Coding Challenge #4
+
+/* 
+Write a program that receives a list of variable names written in underscore_case and convert them to camelCase.
+
+The input will come from a textarea inserted into the DOM (see code below), and conversion will happen when the button is pressed.
+
+THIS TEST DATA (pasted to textarea)
+underscore_case
+ first_name
+Some_Variable 
+  calculate_AGE
+delayed_departure
+
+SHOULD PRODUCE THIS OUTPUT (5 separate console.log outputs)
+underscoreCase      ✅
+firstName           ✅✅
+someVariable        ✅✅✅
+calculateAge        ✅✅✅✅
+delayedDeparture    ✅✅✅✅✅
+
+HINT 1: Remember which character defines a new line in the textarea 😉
+HINT 2: The solution only needs to work for a variable made out of 2 words, like a_b
+HINT 3: Start without worrying about the ✅. Tackle that only after you have the variable name conversion working 😉
+HINT 4: This challenge is difficult on purpose, so start watching the solution in case you're stuck. Then pause and continue!
+
+Afterwards, test with your own test data!
+
+GOOD LUCK 😀
+*/
+
+const txtArea = document.querySelector('.txt-area');
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', function () {
+  const text = txtArea.value;
+  const rows = text.split('\n');
+
+  for (const row of rows) {
+    const [first, second] = row.toLowerCase().trim().split('_');
+    const output = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    console.log(output);
+  }
 });
