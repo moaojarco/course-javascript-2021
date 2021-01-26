@@ -28,3 +28,24 @@ h1 {
 .poll {
   right: 2rem;
 }
+
+.box {
+  width: 50vw;
+  position: relative;
+  background: #fff;
+  height: 34px;
+}
+#char {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+}
+
+@keyframes andar {
+  0% {
+    margin: 0;
+  }
+  100% {
+    margin-left: 200px;
+  }
+}
