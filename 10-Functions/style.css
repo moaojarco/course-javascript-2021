@@ -36,9 +36,12 @@ h1 {
   height: 34px;
 }
 #char {
-  height: 32px;
-  width: 32px;
-  position: absolute;
+  position: fixed;
+  width: 80px;
+}
+
+.moveCSS {
+  animation: andar 3s ease;
 }
 
 @keyframes andar {
@@ -46,6 +49,6 @@ h1 {
     margin: 0;
   }
   100% {
-    margin-left: 200px;
+    margin-left: 10px;
   }
 }

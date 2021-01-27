@@ -123,7 +123,7 @@ const book = gol.book;
 //Does NOT work
 // book(23, 'Sarah Williams');
 
-// book.call(tam, 244, 'Sarah Santos');
+// book.call(tam, 244, 'Sarah Willians');
 // console.log(tam);
 
 book.call(tam, 399, 'Julia Serrano');
@@ -135,11 +135,11 @@ const azul = {
   bookings: [],
 };
 
-book.call(azul, 583, 'Azul Coperator');
+book.call(azul, 583, 'Almir Dacio');
 
 //Aply method
-const flightData = [583, 'João Marco'];
-book.apply(azul, flightData);
+const flightData = [583, 'Leonardo Guimarães'];
+// book.apply(azul, flightData);
 console.log(azul);
 
 book.call(azul, ...flightData);
@@ -152,3 +152,71 @@ const bookTAM = book.bind(tam);
 const bookAZUL = book.bind(azul);
 
 bookGOL(49, 'Leandro Reis');
+
+const bookGOL23 = book.bind(gol, 23);
+bookGOL23('Ramon Ike');
+bookGOL23('Giovanna Prado');
+
+//With Event Listener
+gol.planes = 300;
+gol.buyPlane = function () {
+  console.log(this);
+
+  this.planes++;
+  console.log(this.planes);
+};
+
+// gol.buyPlane();
+
+document
+  .querySelector('.buy')
+  .addEventListener('click', gol.buyPlane.bind(gol));
+
+// Partial application
+
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+const addVAT = addTax.bind(null, 0.23);
+// addVAT = (value) => value + value * 0.23;
+
+console.log(addVAT(100));
+console.log(addVAT(23));
+
+const addTaxRate = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+const addVAT2 = addTaxRate(0.23);
+console.log(addVAT2(100));
+console.log(addVAT2(23));
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
+
+const killEnemy = function () {
+  let kill = 0;
+
+  return function () {
+    kill++;
+    console.log(`${kill} kills.`);
+  };
+};
+
+const killer = killEnemy();
+killer();
+killer();
+killer();
