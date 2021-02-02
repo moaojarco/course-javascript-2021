@@ -336,23 +336,31 @@ btnSort.addEventListener('click', function (e) {
 // console.log((2.345).toFixed(2));
 // console.log(+(2.345).toFixed(2));
 
-const ingredients = ['olives', 'spinach', 'chocolate'];
+// const ingredients = ['olives', 'spinach', 'chocolate'];
 
-const pizzaTimer = setTimeout(
-  (ing1, ing2) => {
-    console.log(`Here is your pizza with: ${ing1} and ${ing2}🍕`);
-  },
-  3000,
-  ...ingredients
-);
+// const pizzaTimer = setTimeout(
+//   (ing1, ing2) => {
+//     console.log(`Here is your pizza with: ${ing1} and ${ing2}🍕`);
+//   },
+//   3000,
+//   ...ingredients
+// );
 
-console.log('Waiting...');
+// console.log('Waiting...');
 
-if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+// if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
 
-//setInterval
-setInterval(function () {
-  const now = new Date();
+// //setInterval
+// setInterval(function () {
+//   const now = new Date();
 
-  console.log(now);
-}, 4000);
+//   console.log(now);
+// }, 4000);
+
+console.log(document.documentElement);
+console.log(document.head);
+console.log(document.body);
+
+document.querySelector('.header');
+const allSections = document.querySelectorAll('.section');
+console.log(allSections);
