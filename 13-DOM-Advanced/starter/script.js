@@ -120,6 +120,47 @@ tabsContainer.addEventListener('click', function (e) {
     .classList.add('operations__content--active');
 });
 
+//Menu fade animation
+const handleHover = function (e) {
+  if (e.target.classList.contains('nav__link')) {
+    const link = e.target;
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
+
+    siblings.forEach(el => {
+      if (el !== link) el.style.opacity = this;
+    });
+    logo.style.opacity = this;
+  }
+};
+
+//Passando "argumentos" para handler
+nav.addEventListener('mouseover', handleHover.bind(0.5));
+nav.addEventListener('mouseout', handleHover.bind(1));
+
+///////////////////////////////////////////////////////
+//Sticky navigation
+// const initialCoord = section1.getBoundingClientRect();
+// console.log(initialCoord);
+
+// window.addEventListener('scroll', function (e) {
+//   console.log(window.scrollY);
+
+//   if (window.scrollY > initialCoord.top) nav.classList.add('sticky');
+//   else nav.classList.remove('sticky');
+// });
+
+//Sticky navigation: Intersection Observer API
+const obsCallback = function () {};
+
+const obsOptions = {
+  root: null,
+  threshold: 0.1,
+};
+
+const observer = new IntersectionObserver(obsCallback, obsOptions);
+observer.observe(section1);
+
 // //Selecting  elements
 // console.log(document.documentElement);
 // console.log(document.head);
