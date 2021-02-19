@@ -3,5 +3,4 @@ node_modules
 dist
 .vscode
 .prettierrc
-package-lock.json
 .cache
