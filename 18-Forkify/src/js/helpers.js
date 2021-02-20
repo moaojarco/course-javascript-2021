@@ -18,5 +18,5 @@ export const getJSON = async function(url) {
         return data;
     } catch(err) {
         throw err;
-    }
+      } 
 }
